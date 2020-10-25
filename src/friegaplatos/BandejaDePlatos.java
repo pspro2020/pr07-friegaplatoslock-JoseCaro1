@@ -23,7 +23,7 @@ public class BandejaDePlatos {
     }
 
 
-    protected synchronized void añadirBandeja(Platos plato) throws InterruptedException {
+    protected void añadirBandeja(Platos plato) throws InterruptedException {
         lock.lock();
         try {
             System.out.printf("%s - %s plato nº %d\n", LocalTime.now().format(format), Thread.currentThread().getName(), plato.getNumSerie());
